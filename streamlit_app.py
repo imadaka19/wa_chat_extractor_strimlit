@@ -4,8 +4,21 @@ import pandas as pd
 import io
 import fungsi 
 
+st.sidebar.header("About")
+st.sidebar.text("""
+    READ CAREFULLY:\n
+1. Pastikan nama kontak tim SO diawali nama panggilan. Cth : Juan ACCT ✅ Pak Juan Acct ❌\n
+2. Untuk saat ini gunakan fitur copas manual saja.\n
+3. Copy seluruh data, pastikan copy setiap chatnya dari nama hingga jam dari tiap chat ikut tercopy\n
+4. Sangat disarankan menggunakan template berikut *khusus unrecord*:\n
+
+LOC :\nBIN :\nPN :\nSN :\nQTY :\nREMARK :\n
+""")
+
 # Streamlit App
 st.title("UNRECORD Extractor")
+st.text("Sangat disarankan menggunakan template berikut *khusus unrecord*:")
+st.code("LOC :\nBIN :\nPN :\nSN :\nQTY :\nREMARK :\n")
 
 input_option = st.selectbox("Pilih Input:", ["Upload File .txt", "Copy-Paste Manual"])
 
